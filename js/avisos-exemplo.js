@@ -30,7 +30,7 @@
     },
     {
       titulo: 'Novo horário da farmácia',
-      mensagem: 'A partir deste mês, a farmácia funciona das 08h às 17h, de segunda a sexta-feira.',
+      mensagem: 'A partir deste mês, a farmácia funciona das 08h às 16h, de segunda a sexta-feira.',
       tipo: 'Aviso',
       publicadoEm: diasAPartirDeHoje(-10),
       validoAte: diasAPartirDeHoje(20),
