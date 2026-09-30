@@ -91,7 +91,7 @@ Enquanto `AVISOS_CSV_URL` estiver vazio, o site mostra **avisos de exemplo**, o 
 | Informação | Situação | Fonte |
 |---|---|---|
 | Nome, bairro e telefone | ✅ Informado pela equipe do projeto | Contato com a unidade |
-| Funcionamento de segunda a sexta, das 07:00 às 16:00 | ✅ Informado pela equipe do projeto | Horário da unidade (substitui o horário geral de 7h às 19h divulgado pela prefeitura) |
+| Funcionamento de segunda a sexta, das 07:00 às 19:00 | ✅ Confirmado | Prefeitura de Carapicuíba (horário de todas as UBS/USF do município) |
 | Endereço Av. Consolação, 505 | ⚠️ Confirmar na visita | Busca na web (página oficial fora do ar em 30/09/2026) |
 
 ## ✅ Checklist: confirmar na visita à UBS
