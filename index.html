@@ -424,51 +424,30 @@
     </section>
     <section id="acessibilidade" class="section" aria-labelledby="acessibilidade-titulo">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Para todas as pessoas</span>
-          <h2 id="acessibilidade-titulo">Acessibilidade deste site</h2>
-          <p>Este site segue as diretrizes internacionais WCAG 2.2 (nível AA) e o Modelo de Acessibilidade em Governo Eletrônico (eMAG) para que qualquer pessoa consiga usá-lo.</p>
-        </div>
-
-        <ul class="recursos-grade">
-          <li><i class="bi bi-circle-half" aria-hidden="true"></i><strong>Alto contraste</strong><span>Fundo preto com texto branco e amarelo.</span></li>
-          <li><i class="bi bi-fonts" aria-hidden="true"></i><strong>Tamanho do texto</strong><span>Aumente até 150% sem quebrar a página.</span></li>
-          <li><i class="bi bi-book" aria-hidden="true"></i><strong>Leitura facilitada</strong><span>Fonte mais legível e espaçamento maior entre letras e linhas.</span></li>
-          <li><i class="bi bi-volume-up" aria-hidden="true"></i><strong>Ouvir a página</strong><span>Leitura em voz alta, com opção de ler mais devagar.</span></li>
-          <li><i class="bi bi-hand-index-thumb" aria-hidden="true"></i><strong>Libras</strong><span>Tradução com o VLibras, do Governo Federal.</span></li>
-          <li><i class="bi bi-keyboard" aria-hidden="true"></i><strong>Teclado</strong><span>Tudo funciona sem mouse, com atalhos rápidos.</span></li>
-          <li><i class="bi bi-badge-cc" aria-hidden="true"></i><strong>Leitores de tela</strong><span>Estrutura e rótulos para NVDA, TalkBack e VoiceOver.</span></li>
-          <li><i class="bi bi-phone" aria-hidden="true"></i><strong>Celular e zoom</strong><span>Funciona em qualquer tela e com zoom de até 200%.</span></li>
-        </ul>
-
-        <div class="row g-4 mt-1">
-          <div class="col-lg-6">
-            <div class="panel h-100">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5">
+            <div class="section-head mb-3">
+              <span class="eyebrow">Para todas as pessoas</span>
+              <h2 id="acessibilidade-titulo">Acessibilidade deste site</h2>
+              <p>Este site segue as diretrizes WCAG 2.2 (nível AA) e o eMAG. Contraste, tamanho do texto, leitura em voz alta, Libras e outros ajustes ficam na central de acessibilidade.</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#painel-acessibilidade" aria-controls="painel-acessibilidade">
+              <i class="bi bi-universal-access-circle" aria-hidden="true"></i> Abrir central de acessibilidade
+            </button>
+            <p class="acess-contato">Encontrou alguma dificuldade? Ligue para <a href="tel:+551141885930">(11) 4188-5930</a>.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="panel">
               <h3 class="panel-title">Atalhos de teclado</h3>
               <table class="table atalhos-tabela mb-0">
                 <caption class="visually-hidden">Atalhos de teclado disponíveis no site</caption>
-                <thead><tr><th scope="col">Teclas</th><th scope="col">O que faz</th></tr></thead>
                 <tbody>
                   <tr><td><kbd>Alt</kbd> + <kbd>1</kbd></td><td>Ir para o conteúdo</td></tr>
                   <tr><td><kbd>Alt</kbd> + <kbd>2</kbd></td><td>Ir para o menu</td></tr>
                   <tr><td><kbd>Alt</kbd> + <kbd>3</kbd></td><td>Ir para os avisos</td></tr>
                   <tr><td><kbd>Alt</kbd> + <kbd>4</kbd></td><td>Ir para o rodapé</td></tr>
-                  <tr><td><kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd></td><td>Avançar / voltar entre links e botões</td></tr>
-                  <tr><td><kbd>Enter</kbd> ou <kbd>Espaço</kbd></td><td>Ativar o item selecionado</td></tr>
-                  <tr><td><kbd>Esc</kbd></td><td>Fechar a central de acessibilidade</td></tr>
                 </tbody>
               </table>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="panel h-100">
-              <h3 class="panel-title">Encontrou alguma dificuldade?</h3>
-              <p>Se alguma parte do site não funcionou para você, conte para a gente. Isso nos ajuda a melhorar.</p>
-              <p><strong>Telefone da unidade:</strong> <a href="tel:+551141885930">(11) 4188-5930</a></p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#painel-acessibilidade" aria-controls="painel-acessibilidade">
-                <i class="bi bi-universal-access-circle" aria-hidden="true"></i> Abrir central de acessibilidade
-              </button>
-              <p class="base-legal mt-3 mb-0">Última revisão: setembro de 2026.</p>
             </div>
           </div>
         </div>

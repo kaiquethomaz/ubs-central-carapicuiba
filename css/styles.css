@@ -33,6 +33,7 @@ html { scroll-padding-top: 16px; }
 body { font-size: 1.0625rem; line-height: 1.6; background: var(--c-bg); color: var(--c-ink); }
 h1, h2, h3 { font-weight: 800; letter-spacing: -.02em; color: var(--c-ink); }
 a { color: var(--c-primary); }
+a[href^="tel:"] { white-space: nowrap; }
 
 :focus-visible,
 .btn:focus-visible,
@@ -414,8 +415,7 @@ body.alto-contraste .banner-ouvir { background: #000; }
 .faq .accordion-button { font-weight: 700; font-size: 1.05rem; }
 .faq .accordion-body { color: var(--c-ink-soft); }
 
-.prioridade-grade,
-.recursos-grade {
+.prioridade-grade {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -432,8 +432,7 @@ body.alto-contraste .banner-ouvir { background: #000; }
   border: 1px solid var(--c-line);
   border-radius: var(--radius);
 }
-.prioridade-grade i,
-.recursos-grade i {
+.prioridade-grade i {
   flex: none;
   display: grid;
   place-items: center;
@@ -448,20 +447,10 @@ body.alto-contraste .banner-ouvir { background: #000; }
 .panel-title i { color: var(--c-primary); margin-right: .25rem; }
 .base-legal { margin: 1.5rem 0 0; font-size: .85rem; color: var(--c-ink-soft); }
 
-.recursos-grade li {
-  display: flex;
-  flex-direction: column;
-  gap: .35rem;
-  padding: 1.25rem;
-  background: var(--c-surface);
-  border: 1px solid var(--c-line);
-  border-radius: var(--radius);
-}
-.recursos-grade i { margin-bottom: .35rem; }
-.recursos-grade span { color: var(--c-ink-soft); font-size: .95rem; }
 .atalhos-tabela { --bs-table-bg: transparent; }
-.atalhos-tabela th { font-size: .85rem; color: var(--c-ink-soft); }
-.atalhos-tabela td:first-child { white-space: nowrap; }
+.atalhos-tabela td:first-child { white-space: nowrap; width: 1%; padding-right: 1.5rem; }
+.atalhos-tabela tr:last-child > * { border-bottom: 0; }
+.acess-contato { margin: 1rem 0 0; color: var(--c-ink-soft); }
 .painel-declaracao {
   display: flex;
   align-items: center;
