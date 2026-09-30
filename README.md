@@ -105,7 +105,7 @@ Os pontos estão marcados com `CONFIRMAR NA VISITA` no código. **Nada disso dev
 - [ ] Estrutura física de acessibilidade (bloco comentado na seção "Atendimento prioritário")
 - [ ] Horário do atendimento telefônico
 - [ ] Autorização para usar o nome da unidade e publicar o link
-- [ ] Link da planilha em `js/config.js`
+- [x] Link da planilha em `js/config.js`
 
 > A sigla "SUS" aparece só em texto. Não use o logotipo oficial do SUS ou da prefeitura sem autorização por escrito.
 
