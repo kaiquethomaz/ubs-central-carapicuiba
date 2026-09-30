@@ -1,5 +1,6 @@
 # Landing Page da UBS Central (Carapicuíba/SP), com banner de avisos em tempo real
-n🔗 **Site no ar:** https://ubscentralcarapicuiba.netlify.app
+
+🔗 **Site no ar:** https://ubscentralcarapicuiba.netlify.app
 
 Projeto da **Atividade de Extensão II**: *Tecnologia da Informação Aplicada à Comunidade: Desenvolvimento de Soluções Computacionais para Organizações Sociais*. Curso de Análise e Desenvolvimento de Sistemas, UNIP, 2026/2.
 
