@@ -1,4 +1,5 @@
 # Landing Page da UBS Central (Carapicuíba/SP), com banner de avisos em tempo real
+n🔗 **Site no ar:** https://ubscentralcarapicuiba.netlify.app
 
 Projeto da **Atividade de Extensão II**: *Tecnologia da Informação Aplicada à Comunidade: Desenvolvimento de Soluções Computacionais para Organizações Sociais*. Curso de Análise e Desenvolvimento de Sistemas, UNIP, 2026/2.
 
@@ -67,7 +68,7 @@ Depois, acesse <http://localhost:5500>.
 
 1. Crie uma conta gratuita em <https://app.netlify.com>.
 2. Vá em **Add new site → Deploy manually** e **arraste a pasta do projeto** para a área indicada.
-3. Em **Site configuration → Change site name**, escolha um endereço, como `ubs-central-carapicuiba.netlify.app`.
+3. Em **Site configuration → Change site name**, escolha um endereço, como `ubscentralcarapicuiba.netlify.app`.
 4. Para atualizar, basta arrastar a pasta de novo em **Deploys**.
 
 Alternativa: suba o projeto no GitHub e conecte o repositório no Netlify (**Import from Git**). Assim, cada `git push` publica automaticamente.
@@ -103,7 +104,7 @@ Os pontos estão marcados com `CONFIRMAR NA VISITA` no código. **Nada disso dev
 - [ ] Estrutura física de acessibilidade (bloco comentado na seção "Atendimento prioritário")
 - [ ] Horário do atendimento telefônico
 - [ ] Autorização para usar o nome da unidade e publicar o link
-- [ ] Link da planilha em `js/config.js` e link final em `<link rel="canonical">`
+- [ ] Link da planilha em `js/config.js`
 
 > A sigla "SUS" aparece só em texto. Não use o logotipo oficial do SUS ou da prefeitura sem autorização por escrito.
 
