@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UBS Central · Carapicuíba · Unidade Básica de Saúde</title>
+  <meta name="description" content="Horários, serviços, sala de vacinas, documentos necessários e avisos da UBS Central, na Vila Gustavo Correia, em Carapicuíba/SP. Atendimento público e gratuito pelo SUS.">
+  <meta name="theme-color" content="#0055A5">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="UBS Central · Carapicuíba · Unidade Básica de Saúde">
+  <meta property="og:description" content="Horários, serviços, sala de vacinas e avisos da unidade. Atendimento público e gratuito pelo SUS.">
+  <!-- <link rel="canonical" href="https://SEU-SITE.netlify.app/"> -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="skip-links" aria-label="Atalhos de navegação">
+    <a href="#conteudo" data-atalho="1">Ir para o conteúdo <kbd>Alt+1</kbd></a>
+    <a href="#navegacao" data-atalho="2">Ir para o menu <kbd>Alt+2</kbd></a>
+    <a href="#avisos" data-atalho="3">Ir para os avisos <kbd>Alt+3</kbd></a>
+    <a href="#rodape" data-atalho="4">Ir para o rodapé <kbd>Alt+4</kbd></a>
+  </nav>
+
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <span class="topbar-sus"><i class="bi bi-hospital" aria-hidden="true"></i> Sistema Único de Saúde — SUS</span>
+        <div class="topbar-acoes" role="group" aria-label="Recursos de acessibilidade">
+          <button type="button" id="btn-contraste" aria-pressed="false" aria-label="Alto contraste">
+            <i class="bi bi-circle-half" aria-hidden="true"></i><span class="rotulo">Alto Contraste</span>
+          </button>
+          <button type="button" id="btn-fonte-menos" aria-label="Diminuir tamanho do texto">
+            <span aria-hidden="true">A-</span>
+          </button>
+          <button type="button" id="btn-fonte-mais" aria-label="Aumentar tamanho do texto">
+            <span aria-hidden="true">A+</span>
+          </button>
+          <button type="button" id="btn-ouvir" aria-pressed="false" aria-label="Ouvir a página em voz alta" data-requer-voz>
+            <i class="bi bi-volume-up-fill" aria-hidden="true"></i><span class="rotulo">Ouvir</span>
+          </button>
+          <button type="button" class="btn-painel" data-bs-toggle="offcanvas" data-bs-target="#painel-acessibilidade"
+                  aria-controls="painel-acessibilidade" aria-label="Abrir central de acessibilidade">
+            <i class="bi bi-universal-access-circle" aria-hidden="true"></i><span class="rotulo">Acessibilidade</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-xl site-nav" id="navegacao" aria-label="Navegação principal" tabindex="-1">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio">
+          <span class="brand-sus">SUS</span>
+          <span class="brand-nome">UBS Central</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="#horario-vacinas">Vacinação</a></li>
+            <li class="nav-item"><a class="nav-link" href="#horarios">Horários</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Como Chegar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#duvidas">Dúvidas</a></li>
+          </ul>
+          <a class="btn btn-success ms-xl-3" href="#contato">
+            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Ver Unidade
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section id="inicio" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="status-pill" id="status-funcionamento" role="status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="status-texto">Verificando horário…</span>
+            </span>
+            <h1 class="hero-title">Sua saúde perto de você: <span>atendimento público e gratuito.</span></h1>
+            <p class="hero-lead">
+              Confira a disponibilidade de consultas, o calendário da sala de vacinas e as orientações da UBS Central, em Carapicuíba.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-success btn-lg" href="#horario-vacinas">
+                <i class="bi bi-eyedropper" aria-hidden="true"></i> Sala de Vacinas
+              </a>
+              <a class="btn btn-outline-primary btn-lg" href="#horarios">
+                <i class="bi bi-clock" aria-hidden="true"></i> Ver Horários
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <aside class="hero-card" aria-label="Informações rápidas">
+              <div class="hero-card-icone" aria-hidden="true"><i class="bi bi-hospital"></i></div>
+              <ul class="info-list">
+                <li>
+                  <i class="bi bi-clock" aria-hidden="true"></i>
+                  <div><span>Recepção</span><strong>Seg. a sex., 07:00 às 19:00</strong></div>
+                </li>
+                <li>
+                  <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                  <!-- CONFIRMAR NA VISITA: número e CEP -->
+                  <div><span>Endereço</span><strong>Av. Consolação, 505 · Vila Gustavo Correia</strong></div>
+                </li>
+                <li>
+                  <i class="bi bi-telephone" aria-hidden="true"></i>
+                  <div><span>Telefone</span><strong><a href="tel:+551141885930">(11) 4188-5930</a></strong></div>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avisos" class="avisos-secao" aria-labelledby="avisos-titulo" tabindex="-1">
+      <div class="container">
+        <div class="banner-avisos is-carregando" id="banner-avisos">
+          <div class="banner-icone" aria-hidden="true"><i class="bi bi-megaphone-fill"></i></div>
+          <div class="banner-corpo">
+            <h2 id="avisos-titulo" class="visually-hidden">Avisos da unidade</h2>
+            <div id="avisos-conteudo" aria-live="polite">
+              <span class="banner-skeleton"></span>
+              <span class="banner-skeleton curto"></span>
+            </div>
+            <p class="banner-atualizado" id="avisos-atualizado"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="atalhos" aria-label="Atalhos rápidos">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-6 col-lg-3">
+            <a class="atalho" href="#horario-vacinas">
+              <i class="bi bi-eyedropper" aria-hidden="true"></i>
+              <strong>Vacinação</strong>
+              <span>Doses e horários</span>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a class="atalho" href="#servicos">
+              <i class="bi bi-calendar2-check" aria-hidden="true"></i>
+              <strong>Consultas</strong>
+              <span>Especialidades</span>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a class="atalho" href="#faq-farmacia">
+              <i class="bi bi-capsule" aria-hidden="true"></i>
+              <strong>Farmácia</strong>
+              <span>Retirada de medicamentos</span>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a class="atalho" href="#documentos">
+              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+              <strong>Cadastro</strong>
+              <span>Documentos exigidos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section" aria-labelledby="servicos-titulo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Atendimento</span>
+          <h2 id="servicos-titulo">Serviços oferecidos</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="service-card">
+              <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+              <h3>Clínica Geral &amp; Pediatria</h3>
+              <p>Consultas de rotina, acompanhamento de doenças crônicas e desenvolvimento infantil.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="service-card">
+              <i class="bi bi-person-hearts" aria-hidden="true"></i>
+              <h3>Saúde da Mulher &amp; Pré-Natal</h3>
+              <p>Exames preventivos, acompanhamento gestacional e consultas ginecológicas.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="service-card">
+              <i class="bi bi-emoji-smile" aria-hidden="true"></i>
+              <h3>Odontologia</h3>
+              <p>Avaliação bucal, restaurações, limpeza e atendimento odontológico preventivo.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="horarios" class="section section-tinted" aria-labelledby="horarios-titulo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Quando vir</span>
+          <h2 id="horarios-titulo">Horários de atendimento</h2>
+        </div>
+        <!-- CONFIRMAR NA VISITA: horários dos setores (recepção 7h-19h já confirmada) -->
+        <div class="table-responsive panel p-0">
+          <table class="table table-striped schedule-table mb-0">
+            <caption class="visually-hidden">Horários de atendimento por setor</caption>
+            <thead>
+              <tr>
+                <th scope="col">Setor / Serviço</th>
+                <th scope="col">Dias de atendimento</th>
+                <th scope="col">Horário de funcionamento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Recepção e Triagem</th>
+                <td>Segunda a Sexta</td>
+                <td>07:00 às 19:00</td>
+              </tr>
+              <tr id="horario-vacinas">
+                <th scope="row">Sala de Vacinas</th>
+                <td>Segunda a Sexta</td>
+                <td>07:30 às 16:30</td>
+              </tr>
+              <tr>
+                <th scope="row">Coleta de Exames Laboratoriais</th>
+                <td>Segunda a Sexta</td>
+                <td>07:00 às 09:00 <small>(com jejum)</small></td>
+              </tr>
+              <tr>
+                <th scope="row">Farmácia da Unidade</th>
+                <td>Segunda a Sexta</td>
+                <td>08:00 às 17:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="documentos" class="section" aria-labelledby="documentos-titulo">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5">
+            <div class="section-head mb-0">
+              <span class="eyebrow">Cadastro</span>
+              <h2 id="documentos-titulo">Documentos para Atendimento</h2>
+              <p>Para ser atendido ou fazer o seu cadastro inicial na unidade, tenha em mãos os seguintes documentos originais:</p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <ul class="checklist panel">
+              <li>Documento Oficial com Foto (RG ou CNH)</li>
+              <li>CPF</li>
+              <li>Cartão Nacional do SUS</li>
+              <li>Comprovante de Residência Recente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prioridade" class="section section-tinted" aria-labelledby="prioridade-titulo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Seus direitos</span>
+          <h2 id="prioridade-titulo">Atendimento prioritário e inclusão</h2>
+          <p>Por lei, as pessoas abaixo têm prioridade no atendimento. Ao chegar, avise a recepção.</p>
+        </div>
+        <ul class="prioridade-grade">
+          <li><i class="bi bi-person-raised-hand" aria-hidden="true"></i><span><strong>Pessoas idosas</strong> a partir de 60 anos. A partir de 80 anos, prioridade especial.</span></li>
+          <li><i class="bi bi-person-standing-dress" aria-hidden="true"></i><span><strong>Gestantes e lactantes</strong></span></li>
+          <li><i class="bi bi-balloon-heart" aria-hidden="true"></i><span><strong>Pessoas com criança de colo</strong></span></li>
+          <li><i class="bi bi-person-wheelchair" aria-hidden="true"></i><span><strong>Pessoas com deficiência</strong></span></li>
+          <li><i class="bi bi-puzzle" aria-hidden="true"></i><span><strong>Pessoas com transtorno do espectro autista (TEA)</strong></span></li>
+          <li><i class="bi bi-person-walking" aria-hidden="true"></i><span><strong>Pessoas com mobilidade reduzida</strong></span></li>
+          <li><i class="bi bi-person" aria-hidden="true"></i><span><strong>Pessoas obesas</strong></span></li>
+          <li><i class="bi bi-droplet-half" aria-hidden="true"></i><span><strong>Doadores de sangue</strong></span></li>
+        </ul>
+
+        <div class="row g-4 mt-1">
+          <div class="col-md-6">
+            <div class="panel h-100">
+              <h3 class="panel-title"><i class="bi bi-eye-slash" aria-hidden="true"></i> Cão-guia é bem-vindo</h3>
+              <p class="mb-0">A pessoa com deficiência visual tem o direito de entrar e permanecer na unidade acompanhada do seu cão-guia.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel h-100">
+              <h3 class="panel-title"><i class="bi bi-chat-square-dots" aria-hidden="true"></i> Comunicação sem barreiras</h3>
+              <p class="mb-0">Pessoas surdas podem usar o tradutor de Libras (VLibras) desta página. Na unidade, avise a recepção para que a equipe combine a melhor forma de comunicação com você.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONFIRMAR NA VISITA: descomentar só o que for verificado
+        <div class="panel mt-4">
+          <h3 class="panel-title">Estrutura da unidade</h3>
+          <ul class="checklist">
+            <li>Entrada com rampa de acesso</li>
+            <li>Banheiro adaptado</li>
+            <li>Cadeira de rodas disponível para uso na unidade</li>
+            <li>Assentos preferenciais na recepção</li>
+            <li>Piso tátil</li>
+          </ul>
+        </div>
+        -->
+
+        <p class="base-legal">
+          Base legal: Lei nº 10.048/2000 (atualizada pela Lei nº 14.626/2023), Estatuto da Pessoa Idosa (Lei nº 10.741/2003),
+          Lei nº 12.764/2012 (TEA), Lei nº 11.126/2005 (cão-guia) e Lei Brasileira de Inclusão (Lei nº 13.146/2015).
+        </p>
+      </div>
+    </section>
+
+    <section id="contato" class="section" aria-labelledby="contato-titulo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Como chegar</span>
+          <h2 id="contato-titulo">Localização e contatos</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="panel h-100">
+              <h3 class="panel-title">Endereço e transporte</h3>
+              <ul class="info-list">
+                <li>
+                  <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                  <!-- CONFIRMAR NA VISITA: número, CEP e ponto de referência -->
+                  <div><span>Endereço</span><strong>Av. Consolação, 505 — Vila Gustavo Correia</strong>
+                    <small>Carapicuíba/SP</small></div>
+                </li>
+                <li>
+                  <i class="bi bi-bus-front" aria-hidden="true"></i>
+                  <!-- CONFIRMAR NA VISITA: linhas de ônibus -->
+                  <div><span>Transporte público</span><strong>Pontos de ônibus na Av. Consolação</strong>
+                    <small>Consulte as linhas na recepção ou pelo telefone</small></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel h-100">
+              <h3 class="panel-title">Canais de atendimento</h3>
+              <ul class="info-list">
+                <li>
+                  <i class="bi bi-telephone" aria-hidden="true"></i>
+                  <div><span>Telefone da unidade</span><strong><a href="tel:+551141885930">(11) 4188-5930</a></strong>
+                    <small>Atendimento telefônico das 08h às 17h</small></div>
+                </li>
+                <li>
+                  <i class="bi bi-megaphone" aria-hidden="true"></i>
+                  <div><span>Ouvidoria Geral do SUS</span><strong><a href="tel:136">Disque 136</a></strong></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="map-frame">
+              <iframe title="Mapa com a localização da UBS Central, em Carapicuíba"
+                      src="https://maps.google.com/maps?q=Av.%20Consola%C3%A7%C3%A3o%2C%20505%2C%20Vila%20Gustavo%20Correia%2C%20Carapicu%C3%ADba%20-%20SP&z=16&output=embed"
+                      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a class="btn btn-primary mt-3" href="https://www.google.com/maps/search/?api=1&query=Av.%20Consola%C3%A7%C3%A3o%2C%20505%2C%20Vila%20Gustavo%20Correia%2C%20Carapicu%C3%ADba%20-%20SP" target="_blank" rel="noopener">
+              <i class="bi bi-sign-turn-right" aria-hidden="true"></i> Abrir rota no Google Maps
+              <span class="visually-hidden">(abre em nova aba)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="duvidas" class="section section-tinted" aria-labelledby="duvidas-titulo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Dúvidas</span>
+          <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+        </div>
+        <div class="accordion faq" id="faq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq-bairro" aria-expanded="false" aria-controls="faq-bairro">
+                Posso ser atendido em uma UBS fora do meu bairro?
+              </button>
+            </h3>
+            <div id="faq-bairro" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Atendimentos de acolhimento e urgência leve podem ser feitos em qualquer unidade. Para consultas agendadas e
+                acompanhamento contínuo, é necessário estar cadastrado na UBS de referência do seu endereço.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq-farmacia" aria-expanded="false" aria-controls="faq-farmacia">
+                Como retirar remédios na farmácia da UBS?
+              </button>
+            </h3>
+            <div id="faq-farmacia" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Basta apresentar a receita médica válida emitida pelo SUS, acompanhada do seu documento com foto e Cartão do SUS.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="acessibilidade" class="section" aria-labelledby="acessibilidade-titulo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Para todas as pessoas</span>
+          <h2 id="acessibilidade-titulo">Acessibilidade deste site</h2>
+          <p>Este site segue as diretrizes internacionais WCAG 2.2 (nível AA) e o Modelo de Acessibilidade em Governo Eletrônico (eMAG) para que qualquer pessoa consiga usá-lo.</p>
+        </div>
+
+        <ul class="recursos-grade">
+          <li><i class="bi bi-circle-half" aria-hidden="true"></i><strong>Alto contraste</strong><span>Fundo preto com texto branco e amarelo.</span></li>
+          <li><i class="bi bi-fonts" aria-hidden="true"></i><strong>Tamanho do texto</strong><span>Aumente até 150% sem quebrar a página.</span></li>
+          <li><i class="bi bi-book" aria-hidden="true"></i><strong>Leitura facilitada</strong><span>Fonte mais legível e espaçamento maior entre letras e linhas.</span></li>
+          <li><i class="bi bi-volume-up" aria-hidden="true"></i><strong>Ouvir a página</strong><span>Leitura em voz alta, com opção de ler mais devagar.</span></li>
+          <li><i class="bi bi-hand-index-thumb" aria-hidden="true"></i><strong>Libras</strong><span>Tradução com o VLibras, do Governo Federal.</span></li>
+          <li><i class="bi bi-keyboard" aria-hidden="true"></i><strong>Teclado</strong><span>Tudo funciona sem mouse, com atalhos rápidos.</span></li>
+          <li><i class="bi bi-badge-cc" aria-hidden="true"></i><strong>Leitores de tela</strong><span>Estrutura e rótulos para NVDA, TalkBack e VoiceOver.</span></li>
+          <li><i class="bi bi-phone" aria-hidden="true"></i><strong>Celular e zoom</strong><span>Funciona em qualquer tela e com zoom de até 200%.</span></li>
+        </ul>
+
+        <div class="row g-4 mt-1">
+          <div class="col-lg-6">
+            <div class="panel h-100">
+              <h3 class="panel-title">Atalhos de teclado</h3>
+              <table class="table atalhos-tabela mb-0">
+                <caption class="visually-hidden">Atalhos de teclado disponíveis no site</caption>
+                <thead><tr><th scope="col">Teclas</th><th scope="col">O que faz</th></tr></thead>
+                <tbody>
+                  <tr><td><kbd>Alt</kbd> + <kbd>1</kbd></td><td>Ir para o conteúdo</td></tr>
+                  <tr><td><kbd>Alt</kbd> + <kbd>2</kbd></td><td>Ir para o menu</td></tr>
+                  <tr><td><kbd>Alt</kbd> + <kbd>3</kbd></td><td>Ir para os avisos</td></tr>
+                  <tr><td><kbd>Alt</kbd> + <kbd>4</kbd></td><td>Ir para o rodapé</td></tr>
+                  <tr><td><kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd></td><td>Avançar / voltar entre links e botões</td></tr>
+                  <tr><td><kbd>Enter</kbd> ou <kbd>Espaço</kbd></td><td>Ativar o item selecionado</td></tr>
+                  <tr><td><kbd>Esc</kbd></td><td>Fechar a central de acessibilidade</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="panel h-100">
+              <h3 class="panel-title">Encontrou alguma dificuldade?</h3>
+              <p>Se alguma parte do site não funcionou para você, conte para a gente. Isso nos ajuda a melhorar.</p>
+              <p><strong>Telefone da unidade:</strong> <a href="tel:+551141885930">(11) 4188-5930</a></p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#painel-acessibilidade" aria-controls="painel-acessibilidade">
+                <i class="bi bi-universal-access-circle" aria-hidden="true"></i> Abrir central de acessibilidade
+              </button>
+              <p class="base-legal mt-3 mb-0">Última revisão: setembro de 2026.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="rodape" tabindex="-1">
+    <div class="container">
+      <strong class="footer-brand">Unidade Básica de Saúde — UBS Central</strong>
+      <p>Av. Consolação, 505 · Vila Gustavo Correia · Carapicuíba/SP · <a href="tel:+551141885930">(11) 4188-5930</a></p>
+      <p>Projeto Acadêmico sem fins lucrativos — Informações de utilidade pública.</p>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="#acessibilidade">Acessibilidade</a>
+        <a href="#prioridade">Atendimento prioritário</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <p class="footer-credito">Projeto de extensão · Análise e Desenvolvimento de Sistemas · UNIP · © <span id="ano-atual"></span></p>
+    </div>
+  </footer>
+
+  <div class="offcanvas offcanvas-end painel-acess" tabindex="-1" id="painel-acessibilidade" aria-labelledby="painel-acessibilidade-titulo">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="painel-acessibilidade-titulo">
+        <i class="bi bi-universal-access-circle" aria-hidden="true"></i> Acessibilidade
+      </h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar central de acessibilidade"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p class="painel-intro">Ajuste a página do jeito que for melhor para você. As escolhas ficam salvas neste aparelho.</p>
+
+      <fieldset class="painel-grupo">
+        <legend>Visão</legend>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="pref-altoContraste" data-pref="altoContraste">
+          <label class="form-check-label" for="pref-altoContraste">Alto contraste <small>Fundo preto, texto branco e destaques amarelos</small></label>
+        </div>
+        <div class="painel-fonte">
+          <span id="rotulo-tamanho">Tamanho do texto</span>
+          <div class="painel-fonte-controles" role="group" aria-labelledby="rotulo-tamanho">
+            <button type="button" data-fonte="menos" aria-label="Diminuir texto">A-</button>
+            <output id="valor-fonte" aria-live="polite">100%</output>
+            <button type="button" data-fonte="mais" aria-label="Aumentar texto">A+</button>
+            <button type="button" data-fonte="padrao" class="painel-link">Padrão</button>
+          </div>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="pref-fonteLegivel" data-pref="fonteLegivel">
+          <label class="form-check-label" for="pref-fonteLegivel">Fonte mais legível <small>Letras criadas para pessoas com baixa visão</small></label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="pref-destacarLinks" data-pref="destacarLinks">
+          <label class="form-check-label" for="pref-destacarLinks">Destacar links <small>Sublinha e contorna tudo o que é clicável</small></label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="pref-cursorGrande" data-pref="cursorGrande">
+          <label class="form-check-label" for="pref-cursorGrande">Cursor ampliado <small>Seta do mouse maior e mais visível</small></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="painel-grupo">
+        <legend>Leitura e compreensão</legend>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="pref-espacamento" data-pref="espacamento">
+          <label class="form-check-label" for="pref-espacamento">Espaçamento de texto <small>Mais espaço entre linhas, letras e palavras (ajuda na dislexia)</small></label>
+        </div>
+        <div class="painel-leitura" data-requer-voz>
+          <span class="painel-rotulo" id="rotulo-leitura">Ouvir a página em voz alta</span>
+          <div class="painel-leitura-controles" role="group" aria-labelledby="rotulo-leitura">
+            <button type="button" class="btn btn-primary" data-leitura="iniciar">
+              <i class="bi bi-play-fill" aria-hidden="true"></i> Ouvir
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-leitura="pausar" disabled>
+              <i class="bi bi-pause-fill" aria-hidden="true"></i> <span>Pausar</span>
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-leitura="parar" disabled>
+              <i class="bi bi-stop-fill" aria-hidden="true"></i> Parar
+            </button>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="leitura-lenta">
+            <label class="form-check-label" for="leitura-lenta">Ler mais devagar</label>
+          </div>
+          <p class="painel-status" id="leitura-status" aria-live="polite"></p>
+        </div>
+        <p class="painel-aviso" data-sem-voz hidden>
+          Este navegador não oferece leitura em voz alta. Você pode usar o leitor de tela do seu aparelho
+          (TalkBack no Android, VoiceOver no iPhone ou NVDA no computador).
+        </p>
+      </fieldset>
+
+      <fieldset class="painel-grupo">
+        <legend>Libras</legend>
+        <p class="painel-texto">
+          Tradução do conteúdo para a Língua Brasileira de Sinais com o <strong>VLibras</strong>, tradutor oficial e gratuito do Governo Federal.
+          Depois de abrir, clique em qualquer texto da página para o avatar traduzir.
+        </p>
+        <button type="button" class="btn btn-primary w-100" id="abrir-libras">
+          <i class="bi bi-hand-index-thumb" aria-hidden="true"></i> Abrir tradutor de Libras
+        </button>
+      </fieldset>
+
+      <fieldset class="painel-grupo">
+        <legend>Movimento</legend>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="pref-pausarAnimacoes" data-pref="pausarAnimacoes">
+          <label class="form-check-label" for="pref-pausarAnimacoes">Pausar animações <small>Remove movimentos e transições da página</small></label>
+        </div>
+      </fieldset>
+
+      <div class="painel-grupo">
+        <h3 class="painel-subtitulo">Atalhos de teclado</h3>
+        <ul class="painel-atalhos">
+          <li><kbd>Alt</kbd> + <kbd>1</kbd> Ir para o conteúdo</li>
+          <li><kbd>Alt</kbd> + <kbd>2</kbd> Ir para o menu</li>
+          <li><kbd>Alt</kbd> + <kbd>3</kbd> Ir para os avisos</li>
+          <li><kbd>Alt</kbd> + <kbd>4</kbd> Ir para o rodapé</li>
+        </ul>
+      </div>
+
+      <a class="painel-declaracao fecha-painel" href="#acessibilidade">
+        <i class="bi bi-info-circle" aria-hidden="true"></i> Ver todos os recursos de acessibilidade
+      </a>
+
+      <button type="button" class="btn btn-outline-primary w-100" id="pref-restaurar">
+        <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Restaurar configurações padrão
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/avisos-exemplo.js"></script>
+  <script src="js/leitura.js"></script>
+  <script src="js/avisos.js"></script>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script src="js/libras.js"></script>
+</body>
+</html>
